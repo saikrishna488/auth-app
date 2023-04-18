@@ -13,7 +13,7 @@ const Login = ({fillDetails}) => {
         e.preventDefault();
         let username = e.target[0].value;
         let password = e.target[1].value;
-        let res  = await axios.post('https://auth-app-api-3qf8.onrender.com/login',{
+        let res  = await axios.post('https://auth-app-pink.vercel.app/login',{
           username : username,
           password : password
         },{
