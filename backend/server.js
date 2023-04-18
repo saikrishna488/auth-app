@@ -5,12 +5,11 @@ const app = express();
 const port = process.env.PORT || 5000
 const cors = require("cors");
 
+
+
+app.use(cors());
 app.use(express.json());
-app.use(
-    cors({
-      origin: "*",
-    })
-  );
+
 app.post('/login',(req,res)=>{
     const {username,password} = req.body;
     if(!username && !password){
